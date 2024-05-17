@@ -1,6 +1,17 @@
 from app.core.config import settings
 
-GOOGLE_SPRDSHEET_URL_TEMPLATE = 'https://docs.google.com/spreadsheets/d/'
+
+class GoogleAPIConfig:
+    DRIVE_API = 'drive'
+    DRIVE_API_VER = 'v3'
+    SHEETS_API = 'sheets'
+    SHEETS_API_VER = 'v4'
+    SHEETS_CONF = [{'properties': {'sheetType': 'GRID',
+                                   'sheetId': 0,
+                                   'title': 'Лист1',
+                                   'gridProperties': {'rowCount': 100,
+                                                      'columnCount': 11}}}]
+    SHEETS_URL_TEMPLATE = 'https://docs.google.com/spreadsheets/d/'
 
 
 class FieldExamples:
